@@ -23,3 +23,7 @@
    baseurl=file:///media/AppStream/
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release   
    ```
+1. Mount DVD-ROM as below.
+   ```sh
+   mount /dev/sr0 /media
+   ```
