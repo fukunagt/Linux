@@ -1,5 +1,24 @@
 # Red Hat Enterpirse Linux
 
+## Change Timestamp Format of rsyslog
+1. Open /etc/rsyslog.conf with a text editor.
+1. The default format is RSYSLOG_TraditionalFileFormat.
+   ```
+   # Use default timestamp format
+   module(load="builtin:omfile" Template="RSYSLOG_TraditionalFileFormat")
+   ```
+   ```
+   Oct 24 17:51:38 rhel8-22 rsyslogd[942]: imjournal: journal files changed, reloading...  [v8.1911.0-7.el8 try https://www.rsyslog.com/e/0 ]
+   ```
+1. Change template as below.
+   ```
+   # Use default timestamp format
+   module(load="builtin:omfile" Template="RSYSLOG_FileFormat")
+   ```
+   ```
+   2022-10-25T07:43:03.043202+09:00 rhel8-22 rsyslogd[1027911]: imjournal: journal files changed, reloading...  [v8.1911.0-7.el8 try https://www.rsyslog.com/e/0 ]
+   ```
+
 ## Enable DVD Repository
 1. Move to the following directory.
    ```sh
